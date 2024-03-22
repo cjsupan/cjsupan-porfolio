@@ -25,7 +25,7 @@ const config: Config = {
       pink: colors.pink,
       primary: {
         light: "#42446E",
-        dark: "#42446E",
+        dark: "#D9D9D9",
         DEFAULT: "#42446E",
       },
       secondary: {
@@ -40,7 +40,7 @@ const config: Config = {
       },
     },
     screens: {
-      xs: "480px",
+      xs: "420px",
       // => @media (min-width: 480) { ... }
 
       sm: "640px",

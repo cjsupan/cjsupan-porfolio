@@ -1,8 +1,13 @@
+"use client";
 import Image from "next/image";
 import Navigation from "../components/layout/navigations";
 import { GitHub, Link, Linkedin } from "react-feather";
+import ThemeToggle from "@/components/themeToggle";
+import { useTheme } from "next-themes";
 
 export default function Home() {
+  const { theme, setTheme } = useTheme();
+
   const logos = [
     "/icons/html.svg",
     "/icons/css.svg",
@@ -54,24 +59,41 @@ export default function Home() {
   ];
 
   return (
-    <div id="about" className="bg-white w-screen grid grid-flow-row gap-52">
+    <div
+      id="about"
+      className={`${
+        theme === "dark" ? "bg-background-dark" : "bg-background-light"
+      } flex flex-col justify-center items-center gap-52 xs:gap-28 xs:pb-8`}
+    >
       <Navigation />
-      <div className="w-10/12 grid grid-flow-col content-center place-content-center h-64 mx-auto">
-        <h1 className="text-center w-3/5 font-bold text-[58px] text-primary">
+      <div className="w-10/12 flex lg:flex-row xs:flex-col-reverse gap-8 justify-between items-center">
+        <h1
+          className={`${
+            theme === "dark" ? "text-primary-dark" : "text-primary-light"
+          } xs:text-left lg:text-left font-semibold xs:w-full lg:w-3/5 xs:text-4xl lg:text-7xl`}
+        >
           Hi 👋, My name is{" "}
-          <span className="bg-gradient-to-r from-[#13B0F5] to-blue-500 text-transparent bg-clip-text">
-            CJ Supan
-          </span>{" "}
-          I build things for web
+          <span className=" font-bold text-primary">CJ Supan</span> I build
+          things for web
         </h1>
-        <div className="size-80 ring-2 ring-red rounded-full relative overflow-hidden">
-          <Image src="/profile.jpg" alt="profile" fill sizes="w-80 h-80" />
+        <div className=" ring-2 ring-red rounded-full relative overflow-hidden xs:size-72 lg:size-80">
+          <Image
+            src="/profile.jpg"
+            alt="profile"
+            fill
+            sizes="w-80 h-80"
+            priority
+          />
         </div>
       </div>
 
-      <div id="technologies" className="w-10/12 flex flex-col gap-8 mx-auto">
+      <div id="technologies" className="w-10/12 flex flex-col gap-8">
         <div className="flex flex-col">
-          <h2 className="text-center font-bold text-[48px] text-primary">
+          <h2
+            className={`${
+              theme === "dark" ? "text-primary-dark" : "text-primary-light"
+            } text-center font-bold text-[48px]`}
+          >
             My Tech Stack
           </h2>
           <h4 className="text-center text-[24px] text-secondary">
@@ -79,7 +101,7 @@ export default function Home() {
           </h4>
         </div>
         <div className="w-full flex items-center justify-center">
-          <div className="w-10/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div className="w-10/12 grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {logos.map((logo, index) => (
               <div key={index} className="w-24 h-24 relative">
                 <Image src={logo} alt="logo" fill sizes="w-14 h-14" />
@@ -89,9 +111,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="projects" className="w-10/12 flex flex-col gap-8 mx-auto">
+      <div id="projects" className="w-10/12 flex flex-col gap-8">
         <div className="flex flex-col">
-          <h2 className="text-center font-bold text-[48px] text-primary">
+          <h2
+            className={`${
+              theme === "dark" ? "text-primary-dark" : "text-primary-light"
+            } text-center font-bold text-[48px] `}
+          >
             Projects
           </h2>
           <h4 className="text-center text-[24px] text-secondary">
@@ -99,7 +125,7 @@ export default function Home() {
           </h4>
         </div>
         <div className="w-full flex items-center justify-center">
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-cols-max gap-6">
+          <div className="w-full grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 auto-cols-max gap-6">
             {projects.map((project, index) => (
               <div
                 key={index}
@@ -125,14 +151,28 @@ export default function Home() {
                       href={project.link}
                       className="text-secondary text-sm py-2 mt-4 flex gap-2 underline underline-offset-2"
                     >
-                      <Link className="text-primary" size={20} />
+                      <Link
+                        className={`${
+                          theme === "dark"
+                            ? "text-secondary-dark"
+                            : "text-primary"
+                        }`}
+                        size={20}
+                      />
                       Live Demo
                     </a>
                     <a
                       href={project.code_link}
                       className="text-secondary text-sm py-2 mt-4 flex gap-2 underline underline-offset-2"
                     >
-                      <GitHub className="text-primary" size={20} />
+                      <GitHub
+                        className={`${
+                          theme === "dark"
+                            ? "text-secondary-dark"
+                            : "text-primary"
+                        }`}
+                        size={20}
+                      />
                       Source Code
                     </a>
                   </div>
@@ -143,52 +183,68 @@ export default function Home() {
         </div>
       </div>
 
-      <div
-        id="contact"
-        className="w-10/12 h-52 mx-auto flex flex-col justify-evenly"
-      >
-        <div className="flex justify-between items-center ">
-          <h2 className="text-primary font-bold text-[28px]">Get in Touch</h2>
-          <div className=" flex gap-8">
-            <p className="text-primary">+639195452872</p>
-            <p className="text-primary">supancj18@gmail.com</p>
-            <div className="flex justify-self-end gap-6">
-              <GitHub className="text-primary" size={20} />
-              <Linkedin className="text-primary" size={20} />
+      <div id="contact" className="w-10/12 flex flex-col justify-evenly gap-8">
+        <div className="border border-secondary" />
+        <div className=" grid lg:grid-cols-2 xs:grid-cols-1 xs:gap-8 content-center">
+          <h2
+            className={`${
+              theme === "dark" ? "text-secondary-dark" : "text-primary"
+            } font-bold xs:w-full lg:w-2/5 xs:text-center xs:text-3xl sm:text-md lg:text-3xl`}
+          >
+            Get in Touch
+          </h2>
+          <div className="grid lg:grid-cols-3 place-content-center xs:gap-8 xs:text-center">
+            <p
+              className={`${
+                theme === "dark" ? "text-secondary-dark" : "text-primary"
+              } xs:text-xs lg:text-lg`}
+            >
+              +639195452872
+            </p>
+            <p
+              className={`${
+                theme === "dark" ? "text-secondary-dark" : "text-primary"
+              } xs:text-xs lg:text-lg`}
+            >
+              supancj18@gmail.com
+            </p>
+            <div className="flex xs:justify-center lg:justify-self-end gap-6">
+              <GitHub
+                className={`${
+                  theme === "dark" ? "text-secondary-dark" : "text-primary"
+                }`}
+                size={20}
+              />
+              <Linkedin
+                className={`${
+                  theme === "dark" ? "text-secondary-dark" : "text-primary"
+                }`}
+                size={20}
+              />
             </div>
           </div>
         </div>
-        <div className="border border-secondary" />
-        <div>
-          <ul className="w-full flex gap-8 justify-end">
-            <li>
-              <a href="/" className="text-primary">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="/about" className="text-primary">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="/projects" className="text-primary">
-                Technologies
-              </a>
-            </li>
-            <li>
-              <a href="/projects" className="text-primary">
-                Projects
-              </a>
-            </li>
-            <li>
-              <a href="/contact" className="text-primary">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
+
+        {/* <ul
+          className={`${
+            theme === "dark" ? "text-secondary-dark" : "text-secondary-light"
+          } lg:w-full flex lg:gap-8 xs:gap-2 xs:justify-center lg:justify-end`}
+        >
+          <li>
+            <button onClick={(e: any) => handleScroll(e)}>About</button>
+          </li>
+          <li>
+            <button onClick={(e: any) => handleScroll(e)}>Technologies</button>
+          </li>
+          <li>
+            <button onClick={(e: any) => handleScroll(e)}>Projects</button>
+          </li>
+          <li>
+            <button onClick={(e: any) => handleScroll(e)}>Contact</button>
+          </li>
+        </ul> */}
       </div>
+      <ThemeToggle />
     </div>
   );
 }
