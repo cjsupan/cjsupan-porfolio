@@ -17,7 +17,7 @@ export default function Home() {
     "/icons/nextjs.svg",
     "/icons/nodejs.svg",
     "/icons/mysql.svg",
-    "/icons/mongodb.svg",
+    "/icons/mongoDB.svg",
     "/icons/sass.svg",
     "/icons/tailwind.svg",
     "/icons/github.svg",
