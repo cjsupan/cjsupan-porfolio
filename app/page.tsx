@@ -25,37 +25,37 @@ export default function Home() {
 
   const projects = [
     {
-      title: "Project 1",
+      title: "Appointment Scheduler",
       description:
-        "lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "/sample-image.jpg",
-      link: "/project1",
+        "A web application that allows users to schedule an appointment with a vet. The application is built using Next.js, Tailwind CSS, and MongoDB.",
+      image: "/appointment.png",
+      link: "https://vet-clinic-swart.vercel.app/",
       code_link: "/project1",
     },
     {
-      title: "Project 2",
+      title: "Portfolio Website",
       description:
-        "lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "/sample-image.jpg",
-      link: "/project2",
+        "A web application that showcases my projects and skills. The application is built using Next.js, Tailwind CSS",
+      image: "/portfolio.png",
+      link: "https://cjsupan-porfolio.vercel.app/",
       code_link: "/project2",
     },
-    {
-      title: "Project 3",
-      description:
-        "lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "/sample-image.jpg",
-      link: "/project3",
-      code_link: "/project3",
-    },
-    {
-      title: "Project 4",
-      description:
-        "lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "/sample-image.jpg",
-      link: "/project4",
-      code_link: "/project4",
-    },
+    // {
+    //   title: "Project 3",
+    //   description:
+    //     "lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    //   image: "/sample-image.jpg",
+    //   link: "/project3",
+    //   code_link: "/project3",
+    // },
+    // {
+    //   title: "Project 4",
+    //   description:
+    //     "lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    //   image: "/sample-image.jpg",
+    //   link: "/project4",
+    //   code_link: "/project4",
+    // },
   ];
 
   return (
@@ -125,11 +125,15 @@ export default function Home() {
           </h4>
         </div>
         <div className="w-full flex items-center justify-center">
-          <div className="w-full grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 auto-cols-max gap-6">
+          <div className="w-full grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="w-full rounded-xl border-2 overflow-hidden"
+                className={`w-full rounded-xl overflow-hidden ${
+                  theme === "dark"
+                    ? "border border-secondary-dark"
+                    : "border border-secondary-light"
+                } shadow-sm`}
               >
                 <div className="w-full h-52 relative">
                   <Image
@@ -140,7 +144,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="w-full p-4 flex flex-col gap-2">
-                  <h3 className="text-center font-bold text-[24px]">
+                  <h3 className="text-center font-bold text-lg">
                     {project.title}
                   </h3>
                   <p className="text-sm text-secondary h-32 leading-5 ">
@@ -149,6 +153,7 @@ export default function Home() {
                   <div className="flex justify-between">
                     <a
                       href={project.link}
+                      target="_blank"
                       className="text-secondary text-sm py-2 mt-4 flex gap-2 underline underline-offset-2"
                     >
                       <Link
