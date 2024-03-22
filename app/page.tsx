@@ -215,18 +215,25 @@ export default function Home() {
               supancj18@gmail.com
             </p>
             <div className="flex xs:justify-center lg:justify-self-end gap-6">
-              <GitHub
-                className={`${
-                  theme === "dark" ? "text-secondary-dark" : "text-primary"
-                }`}
-                size={20}
-              />
-              <Linkedin
-                className={`${
-                  theme === "dark" ? "text-secondary-dark" : "text-primary"
-                }`}
-                size={20}
-              />
+              <a href="https://github.com/cjsupan" target="_blank">
+                <GitHub
+                  className={`${
+                    theme === "dark" ? "text-secondary-dark" : "text-primary"
+                  }`}
+                  size={20}
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/cedrick-john-supan/"
+                target="_blank"
+              >
+                <Linkedin
+                  className={`${
+                    theme === "dark" ? "text-secondary-dark" : "text-primary"
+                  }`}
+                  size={20}
+                />
+              </a>
             </div>
           </div>
         </div>

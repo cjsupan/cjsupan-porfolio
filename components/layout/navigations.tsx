@@ -44,12 +44,15 @@ const Navigation = () => {
       </ul>
       <ul className="grid grid-flow-col gap-x-8 text-secondary xs:hidden lg:inline-flex">
         <li>
-          <a href="/" target="">
+          <a href="https://github.com/cjsupan" target="_blank">
             <GitHub size={20} />
           </a>
         </li>
         <li>
-          <a href="/" target="">
+          <a
+            href="https://www.linkedin.com/in/cedrick-john-supan/"
+            target="_blank"
+          >
             <Linkedin size={20} />
           </a>
         </li>
