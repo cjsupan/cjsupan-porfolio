@@ -40,21 +40,26 @@ const config: Config = {
       },
     },
     screens: {
+      //mobile L
       xs: "420px",
       // => @media (min-width: 480) { ... }
 
       sm: "640px",
       // => @media (min-width: 640px) { ... }
 
+      //tablet
       md: "768px",
       // => @media (min-width: 768px) { ... }
 
+      //laptop
       lg: "1024px",
       // => @media (min-width: 1024px) { ... }
 
+      //desktop
       xl: "1280px",
       // => @media (min-width: 1280px) { ... }
 
+      //4k
       "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
     },
