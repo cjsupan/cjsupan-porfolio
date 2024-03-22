@@ -30,7 +30,7 @@ export default function Home() {
         "A web application that allows users to schedule an appointment with a vet. The application is built using Next.js, Tailwind CSS, and MongoDB.",
       image: "/appointment.png",
       link: "https://vet-clinic-swart.vercel.app/",
-      code_link: "/project1",
+      code_link: "https://github.com/cjsupan/vet-clinic",
     },
     {
       title: "Portfolio Website",
@@ -38,7 +38,7 @@ export default function Home() {
         "A web application that showcases my projects and skills. The application is built using Next.js, Tailwind CSS",
       image: "/portfolio.png",
       link: "https://cjsupan-porfolio.vercel.app/",
-      code_link: "/project2",
+      code_link: "https://github.com/cjsupan/cjsupan-porfolio",
     },
     // {
     //   title: "Project 3",
@@ -168,6 +168,7 @@ export default function Home() {
                     </a>
                     <a
                       href={project.code_link}
+                      target="_blank"
                       className="text-secondary text-sm py-2 mt-4 flex gap-2 underline underline-offset-2"
                     >
                       <GitHub
@@ -229,25 +230,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        {/* <ul
-          className={`${
-            theme === "dark" ? "text-secondary-dark" : "text-secondary-light"
-          } lg:w-full flex lg:gap-8 xs:gap-2 xs:justify-center lg:justify-end`}
-        >
-          <li>
-            <button onClick={(e: any) => handleScroll(e)}>About</button>
-          </li>
-          <li>
-            <button onClick={(e: any) => handleScroll(e)}>Technologies</button>
-          </li>
-          <li>
-            <button onClick={(e: any) => handleScroll(e)}>Projects</button>
-          </li>
-          <li>
-            <button onClick={(e: any) => handleScroll(e)}>Contact</button>
-          </li>
-        </ul> */}
       </div>
       <ThemeToggle />
     </div>
