@@ -39,21 +39,21 @@ export default function Home() {
       id="home"
       className={`${
         theme === "dark" ? "bg-background-dark" : "bg-background-light"
-      } flex flex-col justify-center items-center xxs:pb-2 xs:gap-20 xxs:gap-20 xs:pb-8 md:gap-20 lg:gap-42 xl:gap-28`}
+      } flex flex-col justify-center items-center xxs:pb-2 xs:gap-20 xxs:gap-20 xs:pb-8 md:gap-20 lg:gap-42 2xl:gap-80`}
     >
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <NextSeo {...seo} />
       </Head>
       <Navigation />
-      <div className="w-10/12 flex lg:flex-row lg:mb-32 xxs:flex-col-reverse  gap-8 xxs:mb-20 md:justify-center justify-between items-center">
+      <div className="w-10/12 flex lg:flex-row lg:mb-32 xxs:flex-col-reverse gap-8 xxs:mb-20 md:justify-center lg:justify-evenly items-center">
         <h1
           className={`${
             theme === "dark" ? "text-primary-dark" : "text-secondary-light"
           } font-semibold xs:text-left lg:text-left md:text-5xl lg:text-5xl xl:text-6xl xxs:text-2xl`}
         >
           Hi 👋, My name is <br />
-          <span className="xxs:text-3xl md:text-6xl lg:text-6xl font-bold bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text">
+          <span className="xxs:text-3xl md:text-6xl lg:text-6xl xl:text-8xl font-bold bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text">
             Cedrick
           </span>{" "}
           <br />I build things for web
@@ -69,14 +69,14 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="about" className="w-10/12 flex flex-col gap-8 ">
+      <div id="about" className="w-10/12 flex flex-col gap-8 mb-20">
         <div className="flex flex-col gap-3 xxs:gap-0">
           <h2
-            className={` text-center font-bold md:text-4xl xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
+            className={` text-center font-bold lg:text-7xl md:text-4xl xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
             About Me
           </h2>
-          <h4 className="text-center md:text-2xl xxs:text-lg text-secondary">
+          <h4 className="text-center lg:text-4xl md:text-2xl xxs:text-lg text-secondary">
             A little bit about myself
           </h4>
         </div>
@@ -84,7 +84,7 @@ export default function Home() {
           <p
             className={`${
               theme === "dark" ? "text-primary-dark" : "text-secondary-light"
-            } text-lg xxs:text-sm`}
+            } text-lg xxs:text-sm xl:text-2xl`}
           >
             A skilled front-end developer with three years of experience in
             building websites and web applications. Well-versed in Agile
@@ -94,7 +94,7 @@ export default function Home() {
           </p>
           <div className="w-full flex lg:flex-row md:flex-col xxs:flex-col gap-8 justify-between">
             <div className="w-full flex flex-col gap-4">
-              <h3 className="text-left text-3xl xxs:text-2xl text-primary font-semibold">
+              <h3 className="text-left text-3xl xxs:text-2xl xl:text-3xl text-primary font-semibold">
                 Work Experience
               </h3>
               {workExperience.map((work, index) => (
@@ -104,17 +104,17 @@ export default function Home() {
                 >
                   <div className="flex flex-col gap-2">
                     <div className=" flex justify-between items-center">
-                      <h4 className="text-left text-[20px] xxs:text-sm text-secondary">
+                      <h4 className="text-left text-[20px] xl:text-lg xxs:text-sm text-secondary">
                         {work.title}
                       </h4>
                       <div className="bg-[#D7FFE0] rounded-full px-4 xxs:px-2 flex items-center">
-                        <p className="text-[#018C0F] xxs:text-xs text-sm leading-6">
+                        <p className="text-[#018C0F] xxs:text-xs xl:text-md text-sm leading-6">
                           {work.type}
                         </p>
                       </div>
                     </div>
                     <div className="flex justify-between">
-                      <p className="text-left xxs:text-xs text-secondary flex gap-2 items-center">
+                      <p className="text-left xxs:text-xs xl:text-lg text-secondary flex gap-2 items-center">
                         <Briefcase size={16} />
                         {work.company}
                       </p>
@@ -128,7 +128,7 @@ export default function Home() {
             </div>
             <div className=" lg:border border-secondary" />
             <div className="w-full flex flex-col gap-4">
-              <h3 className="text-left text-3xl xxs:text-2xl text-primary font-semibold">
+              <h3 className="text-left text-3xl xxs:text-2xl xl:text-3xl text-primary font-semibold">
                 Education
               </h3>
               <div className=" flex flex-col gap-4 border-b-2 border-secondary pb-4">
@@ -144,7 +144,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex justify-between items-center">
-                    <p className="text-left lg:text-md xs:text-xs xxs:text-xs text-secondary flex gap-2 items-center">
+                    <p className="text-left lg:text-md xs:text-xs xxs:text-xs xl:text-md text-secondary flex gap-2 items-center">
                       <Briefcase size={16} />
                       Saint Louis College - San Fernando City, La Union
                     </p>
@@ -165,20 +165,20 @@ export default function Home() {
       >
         <div className="flex flex-col lg:gap-3 xxs:gap-0">
           <h2
-            className={` text-center font-bold md:text-4xl xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
+            className={` text-center font-bold lg:text-7xl md:text-4xl xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
             My Tech Stack
           </h2>
-          <h4 className="text-center md:text-2xl xxs:text-md text-secondary">
+          <h4 className="text-center lg:text-4xl md:text-2xl xxs:text-md text-secondary">
             Technologies I&apos;ve been working with recently
           </h4>
         </div>
         <div className=" flex items-center justify-center">
-          <div className=" grid grid-cols-1 xxs:grid-cols-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-16 xxs:gap-12 xl:gap-16">
+          <div className=" grid grid-cols-1 xxs:grid-cols-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-6 gap-16 xxs:gap-12 xl:gap-16 2xl:gap-20">
             {logos.map((logo, index) => (
               <div
                 key={index}
-                className="size-24 xxs:size-14 md:size-24 xl:size-28 relative"
+                className="size-24 xxs:size-14 md:size-24 xl:size-28 2xl:size-28 relative"
               >
                 <Image src={logo} alt="logo" fill sizes="w-14 h-14" />
               </div>
@@ -190,11 +190,11 @@ export default function Home() {
       <div id="projects" className="w-10/12 flex flex-col gap-8">
         <div className="flex flex-col gap-3 xxs:gap-0">
           <h2
-            className={`text-center font-bold md:text-4xl xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
+            className={`text-center font-bold lg:text-7xl md:text-4xl xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
             Projects
           </h2>
-          <h4 className="text-center md:text-xl xxs:text-md text-secondary">
+          <h4 className="text-center lg:text-4xl md:text-xl xxs:text-md text-secondary">
             Things I&apos;ve built so far
           </h4>
         </div>
@@ -272,7 +272,7 @@ export default function Home() {
           <h2
             className={`${
               theme === "dark" ? "text-secondary-dark" : "text-primary"
-            } font-bold xxs:w-full lg:w-1/3 xxs:text-3xl xxs:text-center lg:text-left sm:text-md lg:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
+            } font-bold xxs:w-full lg:w-1/3 xxs:text-3xl xxs:text-center lg:text-left sm:text-md lg:text-3xl xl:text-5xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
             Get in Touch
           </h2>

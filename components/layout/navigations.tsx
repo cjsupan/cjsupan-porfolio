@@ -26,31 +26,21 @@ const Navigation = () => {
       id="navigation"
       className={` backdrop-blur-sm w-11/12 h-14 grid grid-flow-col gap-x-8 place-content-end content-center sticky top-0 z-50`}
     >
-      <ul className="grid grid-flow-col lg:gap-x-8 xxs:gap-3 ">
+      <ul className="grid grid-flow-col lg:gap-x-8 xxs:gap-3 xxs:text-sm">
         <li>
-          <button className="xxs:text-xs" onClick={(e: any) => handleScroll(e)}>
-            Home
-          </button>
+          <button onClick={(e: any) => handleScroll(e)}>Home</button>
         </li>
         <li>
-          <button className="xxs:text-xs" onClick={(e: any) => handleScroll(e)}>
-            About
-          </button>
+          <button onClick={(e: any) => handleScroll(e)}>About</button>
         </li>
         <li>
-          <button className="xxs:text-xs" onClick={(e: any) => handleScroll(e)}>
-            Technologies
-          </button>
+          <button onClick={(e: any) => handleScroll(e)}>Technologies</button>
         </li>
         <li>
-          <button className="xxs:text-xs" onClick={(e: any) => handleScroll(e)}>
-            Projects
-          </button>
+          <button onClick={(e: any) => handleScroll(e)}>Projects</button>
         </li>
         <li>
-          <button className="xxs:text-xs" onClick={(e: any) => handleScroll(e)}>
-            Contact
-          </button>
+          <button onClick={(e: any) => handleScroll(e)}>Contact</button>
         </li>
       </ul>
       <ul className="grid grid-flow-col gap-x-8 text-secondary xxs:hidden lg:inline-flex">
