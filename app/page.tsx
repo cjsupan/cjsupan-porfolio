@@ -102,7 +102,7 @@ export default function Home() {
               <div className=" flex flex-col gap-4 border-b-2 pb-4">
                 <div className="flex flex-col gap-2">
                   <div className=" flex justify-between items-center">
-                    <h4 className="text-left lg:text-[20px] xs:text-xs text-secondary">
+                    <h4 className="text-left lg:text-lg xs:text-xs text-secondary">
                       Bachelor in Information Technology
                     </h4>
                     <div className="bg-[#D7FFE0] rounded-full px-4 flex items-center">
@@ -111,12 +111,12 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
-                  <div className="flex justify-between">
-                    <p className="text-left lg:text-[20px] xs:text-xs text-secondary flex gap-2 items-center">
+                  <div className="flex justify-between items-center">
+                    <p className="text-left lg:text-md xs:text-xs text-secondary flex gap-2 items-center">
                       <Briefcase size={16} />
                       Saint Louis College - San Fernando City, La Union
                     </p>
-                    <p className="text-left lg:text-[20px] xs:text-xs text-secondary">
+                    <p className="text-left lg:text-md xs:text-xs text-secondary">
                       June 2015 - July 2022
                     </p>
                   </div>
