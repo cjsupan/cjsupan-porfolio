@@ -78,7 +78,7 @@ export default function Home() {
           </span>{" "}
           <br />I build things for web
         </h1>
-        <div className=" ring-2 ring-red rounded-full relative overflow-hidden xs:size-72 lg:size-80 xl:size-96">
+        <div className=" ring-2 bg-gradient-to-r from-[#13B0F5] to-[#E70FAA]  rounded-full relative overflow-hidden xs:size-72 lg:size-80 xl:size-96">
           <Image
             src="/profile.jpg"
             alt="profile"
@@ -95,9 +95,7 @@ export default function Home() {
       >
         <div className="flex flex-col">
           <h2
-            className={`${
-              theme === "dark" ? "text-primary-dark" : "text-primary-light"
-            } text-center font-bold text-[48px]`}
+            className={` text-center font-bold text-[48px] bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
             My Tech Stack
           </h2>
@@ -106,11 +104,11 @@ export default function Home() {
           </h4>
         </div>
         <div className=" flex items-center justify-center">
-          <div className=" grid grid-cols-1 xs:grid-cols-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-16 xs:gap-12">
+          <div className=" grid grid-cols-1 xs:grid-cols-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-16 xs:gap-12 xl:gap-16">
             {logos.map((logo, index) => (
               <div
                 key={index}
-                className="size-24 xs:size-14 md:size-24 relative"
+                className="size-24 xs:size-14 md:size-24 xl:size-28 relative"
               >
                 <Image src={logo} alt="logo" fill sizes="w-14 h-14" />
               </div>
@@ -122,9 +120,7 @@ export default function Home() {
       <div id="projects" className="w-10/12 flex flex-col gap-8">
         <div className="flex flex-col">
           <h2
-            className={`${
-              theme === "dark" ? "text-primary-dark" : "text-primary-light"
-            } text-center font-bold text-[48px] `}
+            className={`text-center font-bold text-[48px] bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
             Projects
           </h2>
@@ -206,7 +202,7 @@ export default function Home() {
           <h2
             className={`${
               theme === "dark" ? "text-secondary-dark" : "text-primary"
-            } font-bold xs:w-full lg:w-1/3 xs:text-center lg:text-left xs:text-3xl sm:text-md lg:text-3xl`}
+            } font-bold xs:w-full lg:w-1/3 xs:text-center lg:text-left xs:text-3xl sm:text-md lg:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
             Get in Touch
           </h2>
