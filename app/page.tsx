@@ -63,20 +63,22 @@ export default function Home() {
       id="about"
       className={`${
         theme === "dark" ? "bg-background-dark" : "bg-background-light"
-      } flex flex-col justify-center items-center gap-52 xs:gap-28 xs:pb-8`}
+      } flex flex-col justify-center items-center xs:gap-20 xs:pb-8 md:gap-20 lg:gap-42 xl:gap-20`}
     >
       <Navigation />
-      <div className="w-10/12 flex lg:flex-row xs:flex-col-reverse gap-8 justify-between items-center">
+      <div className="w-10/12 flex lg:flex-row lg:mb-32 xs:flex-col-reverse gap-8 xs:mb-20 md:justify-center justify-between items-center">
         <h1
           className={`${
             theme === "dark" ? "text-primary-dark" : "text-secondary-light"
-          } font-semibold xs:text-left lg:text-left  xs:w-full lg:w-3/5 xs:text-4xl lg:text-7xl`}
+          } font-semibold xs:text-left lg:text-left  xs:text-4xl md:text-5xl lg:text-5xl xl:text-7xl`}
         >
-          Hi 👋, My name is{" "}
-          <span className=" font-bold text-primary">CJ Supan</span> I build
-          things for web
+          Hi 👋, My name is <br />
+          <span className=" font-bold bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text">
+            CJ Supan
+          </span>{" "}
+          <br />I build things for web
         </h1>
-        <div className=" ring-2 ring-red rounded-full relative overflow-hidden xs:size-72 lg:size-80">
+        <div className=" ring-2 ring-red rounded-full relative overflow-hidden xs:size-72 lg:size-80 xl:size-96">
           <Image
             src="/profile.jpg"
             alt="profile"
@@ -87,7 +89,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="technologies" className="w-10/12 flex flex-col gap-8">
+      <div
+        id="technologies"
+        className="w-10/12 flex flex-col gap-8 xs:mb-20 lg:mb-32 xl:mb-32"
+      >
         <div className="flex flex-col">
           <h2
             className={`${
@@ -100,10 +105,13 @@ export default function Home() {
             Technologies I&apos;ve been working with recently
           </h4>
         </div>
-        <div className="w-full flex items-center justify-center">
-          <div className="w-10/12 grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <div className=" flex items-center justify-center">
+          <div className=" grid grid-cols-1 xs:grid-cols-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-16 xs:gap-12">
             {logos.map((logo, index) => (
-              <div key={index} className="w-24 h-24 relative">
+              <div
+                key={index}
+                className="size-24 xs:size-14 md:size-24 relative"
+              >
                 <Image src={logo} alt="logo" fill sizes="w-14 h-14" />
               </div>
             ))}
@@ -125,7 +133,7 @@ export default function Home() {
           </h4>
         </div>
         <div className="w-full flex items-center justify-center">
-          <div className="w-full grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="w-full grid grid-cols-1  sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {projects.map((project, index) => (
               <div
                 key={index}
@@ -135,7 +143,7 @@ export default function Home() {
                     : "border border-secondary-light"
                 } shadow-sm`}
               >
-                <div className="w-full h-52 relative">
+                <div className="w-full h-44 relative">
                   <Image
                     src={project.image}
                     alt="project"
