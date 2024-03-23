@@ -24,11 +24,9 @@ const Navigation = () => {
   return (
     <nav
       id="navigation"
-      className={`${
-        theme === "dark" ? "bg-background-dark" : "bg-background-light"
-      } w-11/12 h-14 grid grid-flow-col gap-x-8 place-content-end content-center sticky top-0 z-50`}
+      className={` w-11/12 h-14 grid grid-flow-col gap-x-8 place-content-end content-center sticky top-0 z-50`}
     >
-      <ul className="grid grid-flow-col lg:gap-x-8 xxs:gap-3 text-secondary">
+      <ul className="grid grid-flow-col lg:gap-x-8 xxs:gap-3 ">
         <li>
           <button className="xxs:text-xs" onClick={(e: any) => handleScroll(e)}>
             Home
