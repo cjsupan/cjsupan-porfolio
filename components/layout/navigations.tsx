@@ -24,7 +24,7 @@ const Navigation = () => {
   return (
     <nav
       id="navigation"
-      className={` w-11/12 h-14 grid grid-flow-col gap-x-8 place-content-end content-center sticky top-0 z-50`}
+      className={` backdrop-blur-sm w-11/12 h-14 grid grid-flow-col gap-x-8 place-content-end content-center sticky top-0 z-50`}
     >
       <ul className="grid grid-flow-col lg:gap-x-8 xxs:gap-3 ">
         <li>

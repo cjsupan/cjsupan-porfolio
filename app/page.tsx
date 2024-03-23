@@ -50,10 +50,10 @@ export default function Home() {
         <h1
           className={`${
             theme === "dark" ? "text-primary-dark" : "text-secondary-light"
-          } font-semibold xs:text-left lg:text-left md:text-5xl lg:text-5xl xl:text-7xl xxs:text-2xl`}
+          } font-semibold xs:text-left lg:text-left md:text-5xl lg:text-5xl xl:text-6xl xxs:text-2xl`}
         >
           Hi 👋, My name is <br />
-          <span className=" font-bold bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text">
+          <span className="xxs:text-3xl md:text-6xl lg:text-6xl font-bold bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text">
             Cedrick
           </span>{" "}
           <br />I build things for web
@@ -70,7 +70,7 @@ export default function Home() {
       </div>
 
       <div id="about" className="w-10/12 flex flex-col gap-8 ">
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-3 xxs:gap-0">
           <h2
             className={` text-center font-bold md:text-[48px] xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
@@ -163,7 +163,7 @@ export default function Home() {
         id="technologies"
         className="w-10/12 flex flex-col gap-8 xxs:mb-20 lg:mb-32 xl:mb-32"
       >
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-3 xxs:gap-0">
           <h2
             className={` text-center font-bold md:text-[48px] xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
@@ -188,7 +188,7 @@ export default function Home() {
       </div>
 
       <div id="projects" className="w-10/12 flex flex-col gap-8">
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-3 xxs:gap-0">
           <h2
             className={`text-center font-bold text-[48px] xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
