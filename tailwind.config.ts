@@ -40,6 +40,8 @@ const config: Config = {
       },
     },
     screens: {
+      //mobile S
+      xxs: "320px",
       //mobile L
       xs: "420px",
       // => @media (min-width: 480) { ... }

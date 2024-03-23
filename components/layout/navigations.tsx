@@ -28,24 +28,34 @@ const Navigation = () => {
         theme === "dark" ? "bg-background-dark" : "bg-background-light"
       } w-11/12 h-14 grid grid-flow-col gap-x-8 place-content-end content-center sticky top-0 z-50`}
     >
-      <ul className="grid grid-flow-col lg:gap-x-8 xs:gap-3 text-secondary">
+      <ul className="grid grid-flow-col lg:gap-x-8 xxs:gap-3 text-secondary">
         <li>
-          <button onClick={(e: any) => handleScroll(e)}>Home</button>
+          <button className="xxs:text-xs" onClick={(e: any) => handleScroll(e)}>
+            Home
+          </button>
         </li>
         <li>
-          <button onClick={(e: any) => handleScroll(e)}>About</button>
+          <button className="xxs:text-xs" onClick={(e: any) => handleScroll(e)}>
+            About
+          </button>
         </li>
         <li>
-          <button onClick={(e: any) => handleScroll(e)}>Technologies</button>
+          <button className="xxs:text-xs" onClick={(e: any) => handleScroll(e)}>
+            Technologies
+          </button>
         </li>
         <li>
-          <button onClick={(e: any) => handleScroll(e)}>Projects</button>
+          <button className="xxs:text-xs" onClick={(e: any) => handleScroll(e)}>
+            Projects
+          </button>
         </li>
         <li>
-          <button onClick={(e: any) => handleScroll(e)}>Contact</button>
+          <button className="xxs:text-xs" onClick={(e: any) => handleScroll(e)}>
+            Contact
+          </button>
         </li>
       </ul>
-      <ul className="grid grid-flow-col gap-x-8 text-secondary xs:hidden lg:inline-flex">
+      <ul className="grid grid-flow-col gap-x-8 text-secondary xxs:hidden lg:inline-flex">
         <li>
           <a href="https://github.com/cjsupan" target="_blank">
             <GitHub size={20} />

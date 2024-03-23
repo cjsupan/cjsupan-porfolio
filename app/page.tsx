@@ -1,9 +1,35 @@
 "use client";
+import Head from "next/head";
+import { NextSeo } from "next-seo";
 import Image from "next/image";
 import Navigation from "../components/layout/navigations";
 import { GitHub, Link, Linkedin, Briefcase } from "react-feather";
 import ThemeToggle from "@/components/themeToggle";
 import { useTheme } from "next-themes";
+
+const seo = {
+  title: "Cj Supan - Portfolio",
+  description: "cj supan's portfolio",
+  openGraph: {
+    type: "website",
+    url: "https://cjsupan-porfolio.vercel.app/",
+    title: "Cj Supan - Portfolio",
+    description: "cj supan's portfolio",
+    images: [
+      {
+        url: "https://imgur.com/a/ZyBrqgG",
+        width: 1200,
+        height: 630,
+        alt: "cj supan's portfolio",
+      },
+    ],
+  },
+  twitter: {
+    handle: "@cjsupan",
+    site: "@cjsupan",
+    cardType: "summary_large_image",
+  },
+};
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -13,14 +39,18 @@ export default function Home() {
       id="home"
       className={`${
         theme === "dark" ? "bg-background-dark" : "bg-background-light"
-      } flex flex-col justify-center items-center xs:gap-20 xs:pb-8 md:gap-20 lg:gap-42 xl:gap-20`}
+      } flex flex-col justify-center items-center xxs:pb-2 xs:gap-20 xxs:gap-20 xs:pb-8 md:gap-20 lg:gap-42 xl:gap-20`}
     >
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <NextSeo {...seo} />
+      </Head>
       <Navigation />
-      <div className="w-10/12 flex lg:flex-row lg:mb-32 xs:flex-col-reverse gap-8 xs:mb-20 md:justify-center justify-between items-center">
+      <div className="w-10/12 flex lg:flex-row lg:mb-32 xxs:flex-col-reverse  gap-8 xs:mb-20 md:justify-center justify-between items-center">
         <h1
           className={`${
             theme === "dark" ? "text-primary-dark" : "text-secondary-light"
-          } font-semibold xs:text-left lg:text-left  xs:text-4xl md:text-5xl lg:text-5xl xl:text-7xl`}
+          } font-semibold xs:text-left lg:text-left xs:text-4xl md:text-5xl lg:text-5xl xl:text-7xl xxs:text-2xl`}
         >
           Hi 👋, My name is <br />
           <span className=" font-bold bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text">
@@ -28,7 +58,7 @@ export default function Home() {
           </span>{" "}
           <br />I build things for web
         </h1>
-        <div className=" ring-4 bg-gradient-to-r from-[#13B0F5] to-[#E70FAA]  rounded-full relative overflow-hidden xs:size-72 lg:size-80 xl:size-96">
+        <div className=" ring-4 bg-gradient-to-r from-[#13B0F5] to-[#E70FAA]  rounded-full relative overflow-hidden xs:size-72 lg:size-80 xl:size-96 xxs:size-60">
           <Image
             src="/profile.jpg"
             alt="profile"
@@ -54,7 +84,7 @@ export default function Home() {
           <p
             className={`${
               theme === "dark" ? "text-primary-dark" : "text-secondary-light"
-            } text-lg`}
+            } text-lg xxs:text-sm`}
           >
             A skilled front-end developer with three years of experience in
             building websites and web applications. Well-versed in Agile
@@ -62,9 +92,9 @@ export default function Home() {
             problems-solving abilities and a keen interest in staying current
             with industry trends.
           </p>
-          <div className="w-full flex lg:flex-row md:flex-col xs:flex-col gap-8 justify-between">
+          <div className="w-full flex lg:flex-row md:flex-col xs:flex-col xxs:flex-col gap-8 justify-between">
             <div className="w-full flex flex-col gap-4">
-              <h3 className="text-left text-3xl text-primary font-semibold">
+              <h3 className="text-left text-3xl xxs:text-2xl text-primary font-semibold">
                 Work Experience
               </h3>
               {workExperience.map((work, index) => (
@@ -74,21 +104,23 @@ export default function Home() {
                 >
                   <div className="flex flex-col gap-2">
                     <div className=" flex justify-between items-center">
-                      <h4 className="text-left text-[20px] text-secondary">
+                      <h4 className="text-left text-[20px] xxs:text-sm text-secondary">
                         {work.title}
                       </h4>
-                      <div className="bg-[#D7FFE0] rounded-full px-4 flex items-center">
-                        <p className="text-[#018C0F] text-sm leading-6">
+                      <div className="bg-[#D7FFE0] rounded-full px-4 xxs:px-2 flex items-center">
+                        <p className="text-[#018C0F] xxs:text-xs text-sm leading-6">
                           {work.type}
                         </p>
                       </div>
                     </div>
                     <div className="flex justify-between">
-                      <p className="text-left text-secondary flex gap-2 items-center">
+                      <p className="text-left xxs:text-xs text-secondary flex gap-2 items-center">
                         <Briefcase size={16} />
                         {work.company}
                       </p>
-                      <p className="text-left text-secondary">{work.date}</p>
+                      <p className="text-left xxs:text-xs text-secondary">
+                        {work.date}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -96,27 +128,27 @@ export default function Home() {
             </div>
             <div className=" lg:border border-secondary" />
             <div className="w-full flex flex-col gap-4">
-              <h3 className="text-left text-3xl text-primary font-semibold">
+              <h3 className="text-left text-3xl xxs:text-2xl text-primary font-semibold">
                 Education
               </h3>
               <div className=" flex flex-col gap-4 border-b-2 border-secondary pb-4">
                 <div className="flex flex-col gap-2">
                   <div className=" flex justify-between items-center">
-                    <h4 className="text-left lg:text-lg xs:text-xs text-secondary">
+                    <h4 className="text-left lg:text-lg xs:text-xs xxs:text-xs text-secondary">
                       Bachelor in Information Technology
                     </h4>
                     <div className="bg-[#D7FFE0] rounded-full px-4 flex items-center">
-                      <p className="text-[#018C0F] text-sm leading-6">
+                      <p className="text-[#018C0F] text-sm xxs:text-xs leading-6">
                         Graduated
                       </p>
                     </div>
                   </div>
                   <div className="flex justify-between items-center">
-                    <p className="text-left lg:text-md xs:text-xs text-secondary flex gap-2 items-center">
+                    <p className="text-left lg:text-md xs:text-xs xxs:text-xs text-secondary flex gap-2 items-center">
                       <Briefcase size={16} />
                       Saint Louis College - San Fernando City, La Union
                     </p>
-                    <p className="text-left lg:text-md xs:text-xs text-secondary">
+                    <p className="text-left lg:text-md xs:text-xs xxs:text-xs text-secondary">
                       June 2015 - July 2022
                     </p>
                   </div>
@@ -133,20 +165,20 @@ export default function Home() {
       >
         <div className="flex flex-col">
           <h2
-            className={` text-center font-bold text-[48px] bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
+            className={` text-center font-bold text-[48px] xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
             My Tech Stack
           </h2>
-          <h4 className="text-center text-[24px] text-secondary">
+          <h4 className="text-center text-[24px] xxs:text-lg text-secondary">
             Technologies I&apos;ve been working with recently
           </h4>
         </div>
         <div className=" flex items-center justify-center">
-          <div className=" grid grid-cols-1 xs:grid-cols-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-16 xs:gap-12 xl:gap-16">
+          <div className=" grid grid-cols-1 xxs:grid-cols-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-16 xs:gap-12 xl:gap-16">
             {logos.map((logo, index) => (
               <div
                 key={index}
-                className="size-24 xs:size-14 md:size-24 xl:size-28 relative"
+                className="size-24 xxs:size-10 xs:size-14 md:size-24 xl:size-28 relative"
               >
                 <Image src={logo} alt="logo" fill sizes="w-14 h-14" />
               </div>
@@ -167,7 +199,7 @@ export default function Home() {
           </h4>
         </div>
         <div className="w-full flex items-center justify-center">
-          <div className="w-full grid grid-cols-1  sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {projects.map((project, index) => (
               <div
                 key={index}
@@ -233,22 +265,22 @@ export default function Home() {
 
       <div
         id="contact"
-        className="w-10/12 flex flex-col justify-evenly xs:gap-2 lg:gap-8"
+        className="w-10/12 flex flex-col justify-evenly xxs:gap-2 lg:gap-8"
       >
         <div className="border border-secondary" />
-        <div className="w-full flex lg:flex-row xs:flex-col gap-4 lg:justify-between xs:justify-center">
+        <div className="w-full flex lg:flex-row xs:flex-col gap-4 lg:justify-between xs:justify-center xxs:flex-col">
           <h2
             className={`${
               theme === "dark" ? "text-secondary-dark" : "text-primary"
-            } font-bold xs:w-full lg:w-1/3 xs:text-center lg:text-left xs:text-3xl sm:text-md lg:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
+            } font-bold xxs:w-full xs:w-full lg:w-1/3 xxs:text-3xl xs:text-center xxs:text-center lg:text-left xs:text-3xl sm:text-md lg:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
             Get in Touch
           </h2>
-          <div className="w-full flex lg:flex-row lg:justify-end lg:gap-8  md:flex-row md:gap-8 md:justify-center xs:flex-col xs:items-center xs:gap-4">
+          <div className="w-full flex lg:flex-row lg:justify-end lg:gap-8  md:flex-row md:gap-8 md:justify-center xxs:flex-col xxs:items-center xxs:gap-4 ">
             <p
               className={`${
                 theme === "dark" ? "text-secondary-dark" : "text-primary"
-              } xs:text-xs lg:text-lg`}
+              } xxs:text-xs lg:text-lg`}
             >
               supancj18@gmail.com
             </p>
