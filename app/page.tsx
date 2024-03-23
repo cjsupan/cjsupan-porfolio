@@ -50,10 +50,10 @@ export default function Home() {
         <h1
           className={`${
             theme === "dark" ? "text-primary-dark" : "text-secondary-light"
-          } font-semibold xs:text-left lg:text-left md:text-5xl lg:text-5xl xl:text-6xl xxs:text-2xl`}
+          } font-semibold xs:text-left lg:text-left md:text-5xl lg:text-5xl xl:text-6xl xxs:text-4xl`}
         >
           Hi 👋, My name is <br />
-          <span className="xxs:text-3xl md:text-6xl lg:text-6xl xl:text-8xl font-bold bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text">
+          <span className="xxs:text-5xl  md:text-6xl lg:text-6xl xl:text-8xl font-bold bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text">
             Cedrick
           </span>{" "}
           <br />I build things for web
@@ -72,7 +72,7 @@ export default function Home() {
       <div id="about" className="w-10/12 flex flex-col gap-8 mb-20">
         <div className="flex flex-col gap-3 xxs:gap-0">
           <h2
-            className={` text-center font-bold lg:text-7xl md:text-4xl xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
+            className={` text-center font-bold lg:text-7xl md:text-4xl xxs:text-5xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
             About Me
           </h2>
@@ -165,7 +165,7 @@ export default function Home() {
       >
         <div className="flex flex-col lg:gap-3 xxs:gap-0">
           <h2
-            className={` text-center font-bold lg:text-7xl md:text-4xl xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
+            className={` text-center font-bold lg:text-7xl md:text-4xl xxs:text-4xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
             My Tech Stack
           </h2>
@@ -190,7 +190,7 @@ export default function Home() {
       <div id="projects" className="w-10/12 flex flex-col gap-8">
         <div className="flex flex-col gap-3 xxs:gap-0">
           <h2
-            className={`text-center font-bold lg:text-7xl md:text-4xl xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
+            className={`text-center font-bold lg:text-7xl md:text-4xl xxs:text-4xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
             Projects
           </h2>
@@ -265,26 +265,26 @@ export default function Home() {
 
       <div
         id="contact"
-        className="w-10/12 flex flex-col justify-evenly xxs:gap-2 lg:gap-8"
+        className="w-10/12 flex flex-col justify-evenly xxs:gap-2 lg:gap-4"
       >
         <div className="border border-secondary" />
-        <div className="w-full flex lg:flex-row xxs:flex-col gap-4 lg:justify-between xs:justify-center">
+        <div className="w-full flex justify-between">
           <h2
             className={`${
               theme === "dark" ? "text-secondary-dark" : "text-primary"
-            } font-bold xxs:w-full lg:w-1/3 xxs:text-3xl xxs:text-center lg:text-left sm:text-md lg:text-3xl xl:text-5xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
+            } font-bold lg:w-1/3 xxs:text-sm lg:text-left xs:text-2xl md:text-2xl lg:text-3xl xl:text-5xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
             Get in Touch
           </h2>
-          <div className="w-full flex lg:flex-row lg:justify-end lg:gap-8  md:flex-row md:gap-8 md:justify-center xxs:flex-col xxs:items-center xxs:gap-4 ">
+          <div className=" flex lg:flex-row justify-end lg:gap-8 md:flex-row md:gap-8 md:justify-center xxs:items-center xxs:gap-2">
             <p
               className={`${
                 theme === "dark" ? "text-secondary-dark" : "text-primary"
-              } xxs:text-xs lg:text-lg`}
+              } xxs:text-[10px] md:text-lg lg:text-lg `}
             >
               supancj18@gmail.com
             </p>
-            <div className="flex xs:justify-center lg:justify-self-end gap-6">
+            <div className="flex justify-self-end gap-6 xxs:gap-1 md:gap-4">
               <a href="https://github.com/cjsupan" target="_blank">
                 <GitHub
                   className={`${
