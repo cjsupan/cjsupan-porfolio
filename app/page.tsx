@@ -70,7 +70,7 @@ export default function Home() {
               {workExperience.map((work, index) => (
                 <div
                   key={index}
-                  className=" flex flex-col gap-4 border-b-2 pb-4"
+                  className=" flex flex-col gap-4 border-b-2 border-secondary pb-4"
                 >
                   <div className="flex flex-col gap-2">
                     <div className=" flex justify-between items-center">
@@ -94,12 +94,12 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className=" border border-secondary" />
+            <div className=" lg:border border-secondary" />
             <div className="w-full flex flex-col gap-4">
               <h3 className="text-left text-3xl text-primary font-semibold">
                 Education
               </h3>
-              <div className=" flex flex-col gap-4 border-b-2 pb-4">
+              <div className=" flex flex-col gap-4 border-b-2 border-secondary pb-4">
                 <div className="flex flex-col gap-2">
                   <div className=" flex justify-between items-center">
                     <h4 className="text-left lg:text-lg xs:text-xs text-secondary">
