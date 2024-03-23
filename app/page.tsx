@@ -46,19 +46,19 @@ export default function Home() {
         <NextSeo {...seo} />
       </Head>
       <Navigation />
-      <div className="w-10/12 flex lg:flex-row lg:mb-32 xxs:flex-col-reverse  gap-8 xs:mb-20 md:justify-center justify-between items-center">
+      <div className="w-10/12 flex lg:flex-row lg:mb-32 xxs:flex-col-reverse  gap-8 xxs:mb-20 md:justify-center justify-between items-center">
         <h1
           className={`${
             theme === "dark" ? "text-primary-dark" : "text-secondary-light"
-          } font-semibold xs:text-left lg:text-left xs:text-4xl md:text-5xl lg:text-5xl xl:text-7xl xxs:text-2xl`}
+          } font-semibold xs:text-left lg:text-left md:text-5xl lg:text-5xl xl:text-7xl xxs:text-2xl`}
         >
           Hi 👋, My name is <br />
           <span className=" font-bold bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text">
-            CJ Supan
+            Cedrick
           </span>{" "}
           <br />I build things for web
         </h1>
-        <div className=" ring-4 bg-gradient-to-r from-[#13B0F5] to-[#E70FAA]  rounded-full relative overflow-hidden xs:size-72 lg:size-80 xl:size-96 xxs:size-60">
+        <div className=" ring-4 bg-gradient-to-r from-[#13B0F5] to-[#E70FAA]  rounded-full relative overflow-hidden lg:size-80 xl:size-96 xxs:size-60">
           <Image
             src="/profile.jpg"
             alt="profile"
@@ -69,14 +69,14 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="about" className="w-10/12 flex flex-col gap-8">
+      <div id="about" className="w-10/12 flex flex-col gap-8 ">
         <div className="flex flex-col">
           <h2
-            className={` text-center font-bold text-[48px] bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
+            className={` text-center font-bold md:text-[48px] bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
             About Me
           </h2>
-          <h4 className="text-center text-[24px] text-secondary">
+          <h4 className="text-center md:text-[24px] xxs:text-lg text-secondary">
             A little bit about myself
           </h4>
         </div>
@@ -92,7 +92,7 @@ export default function Home() {
             problems-solving abilities and a keen interest in staying current
             with industry trends.
           </p>
-          <div className="w-full flex lg:flex-row md:flex-col xs:flex-col xxs:flex-col gap-8 justify-between">
+          <div className="w-full flex lg:flex-row md:flex-col xxs:flex-col gap-8 justify-between">
             <div className="w-full flex flex-col gap-4">
               <h3 className="text-left text-3xl xxs:text-2xl text-primary font-semibold">
                 Work Experience
@@ -161,24 +161,24 @@ export default function Home() {
 
       <div
         id="technologies"
-        className="w-10/12 flex flex-col gap-8 xs:mb-20 lg:mb-32 xl:mb-32"
+        className="w-10/12 flex flex-col gap-8 xxs:mb-20 lg:mb-32 xl:mb-32"
       >
         <div className="flex flex-col">
           <h2
-            className={` text-center font-bold text-[48px] xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
+            className={` text-center font-bold md:text-[48px] xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
             My Tech Stack
           </h2>
-          <h4 className="text-center text-[24px] xxs:text-lg text-secondary">
+          <h4 className="text-center md:text-[24px] xxs:text-md text-secondary">
             Technologies I&apos;ve been working with recently
           </h4>
         </div>
         <div className=" flex items-center justify-center">
-          <div className=" grid grid-cols-1 xxs:grid-cols-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-16 xs:gap-12 xl:gap-16">
+          <div className=" grid grid-cols-1 xxs:grid-cols-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-16 xxs:gap-12 xl:gap-16">
             {logos.map((logo, index) => (
               <div
                 key={index}
-                className="size-24 xxs:size-10 xs:size-14 md:size-24 xl:size-28 relative"
+                className="size-24 xxs:size-14 md:size-24 xl:size-28 relative"
               >
                 <Image src={logo} alt="logo" fill sizes="w-14 h-14" />
               </div>
@@ -190,11 +190,11 @@ export default function Home() {
       <div id="projects" className="w-10/12 flex flex-col gap-8">
         <div className="flex flex-col">
           <h2
-            className={`text-center font-bold text-[48px] bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
+            className={`text-center font-bold text-[48px] xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
             Projects
           </h2>
-          <h4 className="text-center text-[24px] text-secondary">
+          <h4 className="text-center md:text-[24px] xxs:text-md text-secondary">
             Things I&apos;ve built so far
           </h4>
         </div>
@@ -268,11 +268,11 @@ export default function Home() {
         className="w-10/12 flex flex-col justify-evenly xxs:gap-2 lg:gap-8"
       >
         <div className="border border-secondary" />
-        <div className="w-full flex lg:flex-row xs:flex-col gap-4 lg:justify-between xs:justify-center xxs:flex-col">
+        <div className="w-full flex lg:flex-row xxs:flex-col gap-4 lg:justify-between xs:justify-center">
           <h2
             className={`${
               theme === "dark" ? "text-secondary-dark" : "text-primary"
-            } font-bold xxs:w-full xs:w-full lg:w-1/3 xxs:text-3xl xs:text-center xxs:text-center lg:text-left xs:text-3xl sm:text-md lg:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
+            } font-bold xxs:w-full lg:w-1/3 xxs:text-3xl xxs:text-center lg:text-left sm:text-md lg:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
             Get in Touch
           </h2>
