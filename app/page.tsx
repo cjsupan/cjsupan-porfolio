@@ -39,7 +39,7 @@ export default function Home() {
       id="home"
       className={`${
         theme === "dark" ? "bg-background-dark" : "bg-background-light"
-      } flex flex-col justify-center items-center xxs:pb-2 xs:gap-20 xxs:gap-20 xs:pb-8 md:gap-20 lg:gap-42 2xl:gap-80`}
+      } flex flex-col justify-center items-center xxs:pb-2 xs:gap-20 xxs:gap-20 xs:pb-8 md:gap-20 lg:gap-42`}
     >
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
