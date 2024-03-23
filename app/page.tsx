@@ -1,66 +1,16 @@
 "use client";
 import Image from "next/image";
 import Navigation from "../components/layout/navigations";
-import { GitHub, Link, Linkedin } from "react-feather";
+import { GitHub, Link, Linkedin, Briefcase } from "react-feather";
 import ThemeToggle from "@/components/themeToggle";
 import { useTheme } from "next-themes";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
 
-  const logos = [
-    "/icons/html.svg",
-    "/icons/css.svg",
-    "/icons/js.svg",
-    "/icons/ts.svg",
-    "/icons/react.svg",
-    "/icons/nextjs.svg",
-    "/icons/nodejs.svg",
-    "/icons/mysql.svg",
-    "/icons/mongoDB.svg",
-    "/icons/sass.svg",
-    "/icons/tailwind.svg",
-    "/icons/github.svg",
-  ];
-
-  const projects = [
-    {
-      title: "Appointment Scheduler",
-      description:
-        "A web application that allows users to schedule an appointment with a vet. The application is built using Next.js, Tailwind CSS, and MongoDB.",
-      image: "/appointment.png",
-      link: "https://vet-clinic-swart.vercel.app/",
-      code_link: "https://github.com/cjsupan/vet-clinic",
-    },
-    {
-      title: "Portfolio Website",
-      description:
-        "A web application that showcases my projects and skills. The application is built using Next.js, Tailwind CSS",
-      image: "/portfolio.png",
-      link: "https://cjsupan-porfolio.vercel.app/",
-      code_link: "https://github.com/cjsupan/cjsupan-porfolio",
-    },
-    // {
-    //   title: "Project 3",
-    //   description:
-    //     "lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    //   image: "/sample-image.jpg",
-    //   link: "/project3",
-    //   code_link: "/project3",
-    // },
-    // {
-    //   title: "Project 4",
-    //   description:
-    //     "lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    //   image: "/sample-image.jpg",
-    //   link: "/project4",
-    //   code_link: "/project4",
-    // },
-  ];
-
   return (
     <div
-      id="about"
+      id="home"
       className={`${
         theme === "dark" ? "bg-background-dark" : "bg-background-light"
       } flex flex-col justify-center items-center xs:gap-20 xs:pb-8 md:gap-20 lg:gap-42 xl:gap-20`}
@@ -78,7 +28,7 @@ export default function Home() {
           </span>{" "}
           <br />I build things for web
         </h1>
-        <div className=" ring-2 bg-gradient-to-r from-[#13B0F5] to-[#E70FAA]  rounded-full relative overflow-hidden xs:size-72 lg:size-80 xl:size-96">
+        <div className=" ring-4 bg-gradient-to-r from-[#13B0F5] to-[#E70FAA]  rounded-full relative overflow-hidden xs:size-72 lg:size-80 xl:size-96">
           <Image
             src="/profile.jpg"
             alt="profile"
@@ -86,6 +36,94 @@ export default function Home() {
             sizes="w-80 h-80"
             priority
           />
+        </div>
+      </div>
+
+      <div id="about" className="w-10/12 flex flex-col gap-8">
+        <div className="flex flex-col">
+          <h2
+            className={` text-center font-bold text-[48px] bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
+          >
+            About Me
+          </h2>
+          <h4 className="text-center text-[24px] text-secondary">
+            A little bit about myself
+          </h4>
+        </div>
+        <div className="flex flex-col gap-8">
+          <p
+            className={`${
+              theme === "dark" ? "text-primary-dark" : "text-secondary-light"
+            } text-lg`}
+          >
+            A skilled front-end developer with three years of experience in
+            building websites and web applications. Well-versed in Agile
+            methodology and responsive UI design. Possesses strong
+            problems-solving abilities and a keen interest in staying current
+            with industry trends.
+          </p>
+          <div className="w-full flex md:flex-col xs:flex-col gap-8 justify-between">
+            <div className="w-full flex flex-col gap-4">
+              <h3 className="text-left text-3xl text-primary font-semibold">
+                Work Experience
+              </h3>
+              {workExperience.map((work, index) => (
+                <div
+                  key={index}
+                  className=" flex flex-col gap-4 border-b-2 pb-4"
+                >
+                  <div className="flex flex-col gap-2">
+                    <div className=" flex justify-between items-center">
+                      <h4 className="text-left text-[20px] text-secondary">
+                        {work.title}
+                      </h4>
+                      <div className="bg-[#D7FFE0] rounded-full px-4 flex items-center">
+                        <p className="text-[#018C0F] text-sm leading-6">
+                          {work.type}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex justify-between">
+                      <p className="text-left text-secondary flex gap-2 items-center">
+                        <Briefcase size={16} />
+                        {work.company}
+                      </p>
+                      <p className="text-left text-secondary">{work.date}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className=" border border-secondary" />
+            <div className="w-full flex flex-col gap-4">
+              <h3 className="text-left text-3xl text-primary font-semibold">
+                Education
+              </h3>
+              <div className=" flex flex-col gap-4 border-b-2 pb-4">
+                <div className="flex flex-col gap-2">
+                  <div className=" flex justify-between items-center">
+                    <h4 className="text-left text-[20px] xs:text-xs text-secondary">
+                      Bachelor in Information Technology
+                    </h4>
+                    <div className="bg-[#D7FFE0] rounded-full px-4 flex items-center">
+                      <p className="text-[#018C0F] text-sm leading-6">
+                        Graduated
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex justify-between">
+                    <p className="text-left xs:text-xs text-secondary flex gap-2 items-center">
+                      <Briefcase size={16} />
+                      Saint Louis College - San Fernando City, La Union
+                    </p>
+                    <p className="text-left xs:text-xs text-secondary">
+                      June 2015 - July 2022
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -249,3 +287,80 @@ export default function Home() {
     </div>
   );
 }
+
+const workExperience = [
+  {
+    title: "Front-end Developer",
+    company: "Vashcorp Inc.",
+    date: "Nov 2023 - Mar 2024",
+    type: "Full Time",
+  },
+  {
+    title: "Full-stack Developer",
+    company: "Volenday",
+    date: "Nov 2021 - Nov 2024",
+    type: "Full Time",
+  },
+  {
+    title: "Front-end Developer",
+    company: "Raksquad Tech Corp.",
+    date: "July 2021 - Sept 2021",
+    type: "Internship",
+  },
+  {
+    title: "Full-stack Developer",
+    company: "Villge88",
+    date: "Mar 2021 - June 2021",
+    type: "Internship",
+  },
+];
+
+const logos = [
+  "/icons/html.svg",
+  "/icons/css.svg",
+  "/icons/js.svg",
+  "/icons/ts.svg",
+  "/icons/react.svg",
+  "/icons/nextjs.svg",
+  "/icons/nodejs.svg",
+  "/icons/mysql.svg",
+  "/icons/mongoDB.svg",
+  "/icons/sass.svg",
+  "/icons/tailwind.svg",
+  "/icons/github.svg",
+];
+
+const projects = [
+  {
+    title: "Appointment Scheduler",
+    description:
+      "A web application that allows users to schedule an appointment with a vet. The application is built using Next.js, Tailwind CSS, and MongoDB.",
+    image: "/appointment.png",
+    link: "https://vet-clinic-swart.vercel.app/",
+    code_link: "https://github.com/cjsupan/vet-clinic",
+  },
+  {
+    title: "Portfolio Website",
+    description:
+      "A web application that showcases my projects and skills. The application is built using Next.js, Tailwind CSS",
+    image: "/portfolio.png",
+    link: "https://cjsupan-porfolio.vercel.app/",
+    code_link: "https://github.com/cjsupan/cjsupan-porfolio",
+  },
+  // {
+  //   title: "Project 3",
+  //   description:
+  //     "lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //   image: "/sample-image.jpg",
+  //   link: "/project3",
+  //   code_link: "/project3",
+  // },
+  // {
+  //   title: "Project 4",
+  //   description:
+  //     "lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //   image: "/sample-image.jpg",
+  //   link: "/project4",
+  //   code_link: "/project4",
+  // },
+];
