@@ -62,7 +62,7 @@ export default function Home() {
             problems-solving abilities and a keen interest in staying current
             with industry trends.
           </p>
-          <div className="w-full flex md:flex-col xs:flex-col gap-8 justify-between">
+          <div className="w-full flex lg:flex-row md:flex-col xs:flex-col gap-8 justify-between">
             <div className="w-full flex flex-col gap-4">
               <h3 className="text-left text-3xl text-primary font-semibold">
                 Work Experience
@@ -102,7 +102,7 @@ export default function Home() {
               <div className=" flex flex-col gap-4 border-b-2 pb-4">
                 <div className="flex flex-col gap-2">
                   <div className=" flex justify-between items-center">
-                    <h4 className="text-left text-[20px] xs:text-xs text-secondary">
+                    <h4 className="text-left lg:text-[20px] xs:text-xs text-secondary">
                       Bachelor in Information Technology
                     </h4>
                     <div className="bg-[#D7FFE0] rounded-full px-4 flex items-center">
@@ -112,11 +112,11 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex justify-between">
-                    <p className="text-left xs:text-xs text-secondary flex gap-2 items-center">
+                    <p className="text-left lg:text-[20px] xs:text-xs text-secondary flex gap-2 items-center">
                       <Briefcase size={16} />
                       Saint Louis College - San Fernando City, La Union
                     </p>
-                    <p className="text-left xs:text-xs text-secondary">
+                    <p className="text-left lg:text-[20px] xs:text-xs text-secondary">
                       June 2015 - July 2022
                     </p>
                   </div>
