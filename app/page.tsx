@@ -250,13 +250,6 @@ export default function Home() {
                 theme === "dark" ? "text-secondary-dark" : "text-primary"
               } xs:text-xs lg:text-lg`}
             >
-              +639195452872
-            </p>
-            <p
-              className={`${
-                theme === "dark" ? "text-secondary-dark" : "text-primary"
-              } xs:text-xs lg:text-lg`}
-            >
               supancj18@gmail.com
             </p>
             <div className="flex xs:justify-center lg:justify-self-end gap-6">
