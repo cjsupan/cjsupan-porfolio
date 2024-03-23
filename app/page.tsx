@@ -72,7 +72,7 @@ export default function Home() {
       <div id="about" className="w-10/12 flex flex-col gap-8 ">
         <div className="flex flex-col">
           <h2
-            className={` text-center font-bold md:text-[48px] bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
+            className={` text-center font-bold md:text-[48px] xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
             About Me
           </h2>
