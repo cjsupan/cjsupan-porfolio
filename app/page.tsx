@@ -72,11 +72,11 @@ export default function Home() {
       <div id="about" className="w-10/12 flex flex-col gap-8 ">
         <div className="flex flex-col gap-3 xxs:gap-0">
           <h2
-            className={` text-center font-bold md:text-[48px] xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
+            className={` text-center font-bold md:text-4xl xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
             About Me
           </h2>
-          <h4 className="text-center md:text-[24px] xxs:text-lg text-secondary">
+          <h4 className="text-center md:text-2xl xxs:text-lg text-secondary">
             A little bit about myself
           </h4>
         </div>
@@ -163,13 +163,13 @@ export default function Home() {
         id="technologies"
         className="w-10/12 flex flex-col gap-8 xxs:mb-20 lg:mb-32 xl:mb-32"
       >
-        <div className="flex flex-col gap-3 xxs:gap-0">
+        <div className="flex flex-col lg:gap-3 xxs:gap-0">
           <h2
-            className={` text-center font-bold md:text-[48px] xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
+            className={` text-center font-bold md:text-4xl xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
             My Tech Stack
           </h2>
-          <h4 className="text-center md:text-[24px] xxs:text-md text-secondary">
+          <h4 className="text-center md:text-2xl xxs:text-md text-secondary">
             Technologies I&apos;ve been working with recently
           </h4>
         </div>
@@ -190,11 +190,11 @@ export default function Home() {
       <div id="projects" className="w-10/12 flex flex-col gap-8">
         <div className="flex flex-col gap-3 xxs:gap-0">
           <h2
-            className={`text-center font-bold text-[48px] xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
+            className={`text-center font-bold md:text-4xl xxs:text-3xl bg-gradient-to-r from-[#13B0F5] to-[#E70FAA] inline-block text-transparent bg-clip-text`}
           >
             Projects
           </h2>
-          <h4 className="text-center md:text-[24px] xxs:text-md text-secondary">
+          <h4 className="text-center md:text-xl xxs:text-md text-secondary">
             Things I&apos;ve built so far
           </h4>
         </div>

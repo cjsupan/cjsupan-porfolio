@@ -30,8 +30,8 @@ const config: Config = {
       },
       secondary: {
         light: "#666666",
-        dark: "#666666",
-        DEFAULT: "#666666",
+        dark: "#A7A7A7",
+        DEFAULT: "#A7A7A7",
       },
       background: {
         light: "#FFFFFF",
