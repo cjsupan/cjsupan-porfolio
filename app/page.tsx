@@ -334,7 +334,7 @@ const workExperience = [
   },
   {
     title: "Full-stack Developer",
-    company: "Villge88",
+    company: "Village88",
     date: "Mar 2021 - June 2021",
     type: "Internship",
   },
