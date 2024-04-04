@@ -26,7 +26,11 @@ const Navigation = () => {
       id="navigation"
       className={` backdrop-blur-sm w-11/12 h-14 grid grid-flow-col gap-x-8 place-content-end content-center sticky top-0 z-50`}
     >
-      <ul className="grid grid-flow-col lg:gap-x-8 xxs:gap-3 xxs:text-[12px]">
+      <ul
+        className={`grid grid-flow-col lg:gap-x-8 xxs:gap-3 xxs:text-[12px] lg:text-lg font-semibold ${
+          theme === "dark" ? "text-primary-dark" : "text-secondary-light"
+        }`}
+      >
         <li>
           <button onClick={(e: any) => handleScroll(e)}>Home</button>
         </li>

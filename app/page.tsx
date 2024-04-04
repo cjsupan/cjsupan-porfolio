@@ -58,7 +58,11 @@ export default function Home() {
           </span>{" "}
           <br />I build things for web
         </h1>
-        <div className=" ring-4 bg-gradient-to-r from-[#13B0F5] to-[#E70FAA]  rounded-full relative overflow-hidden lg:size-80 xl:size-96 xxs:size-60">
+        <div
+          className={`${
+            theme === "dark" ? "bg-primary-dark" : "bg-secondary-light"
+          } ring-4 bg-gradient-to-r from-[#13B0F5] to-[#E70FAA]  rounded-full relative overflow-hidden lg:size-80 xl:size-96 xxs:size-60`}
+        >
           <Image
             src="/profile.jpg"
             alt="profile"
