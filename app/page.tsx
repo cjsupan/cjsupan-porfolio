@@ -229,21 +229,23 @@ export default function Home() {
                     {project.description}
                   </p>
                   <div className="flex justify-between">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      className="text-secondary text-sm py-2 mt-4 flex gap-2 underline underline-offset-2"
-                    >
-                      <Link
-                        className={`${
-                          theme === "dark"
-                            ? "text-secondary-dark"
-                            : "text-primary"
-                        }`}
-                        size={20}
-                      />
-                      Live Demo
-                    </a>
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        className="text-secondary text-sm py-2 mt-4 flex gap-2 underline underline-offset-2"
+                      >
+                        <Link
+                          className={`${
+                            theme === "dark"
+                              ? "text-secondary-dark"
+                              : "text-secondary-light"
+                          }`}
+                          size={20}
+                        />
+                        View Project
+                      </a>
+                    )}
                     <a
                       href={project.code_link}
                       target="_blank"
@@ -357,6 +359,7 @@ const logos = [
   "/icons/sass.svg",
   "/icons/tailwind.svg",
   "/icons/github.svg",
+  "/icons/flutter.svg",
 ];
 
 const projects = [
@@ -365,7 +368,7 @@ const projects = [
     description:
       "A web application that allows users to schedule an appointment with a vet. The application is built using Next.js, Tailwind CSS, and MongoDB.",
     image: "/appointment.png",
-    link: "https://vet-clinic-swart.vercel.app/",
+    link: "",
     code_link: "https://github.com/cjsupan/vet-clinic",
   },
   {
@@ -376,20 +379,20 @@ const projects = [
     link: "https://cjsupan-porfolio.vercel.app/",
     code_link: "https://github.com/cjsupan/cjsupan-porfolio",
   },
-  // {
-  //   title: "Project 3",
-  //   description:
-  //     "lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  //   image: "/sample-image.jpg",
-  //   link: "/project3",
-  //   code_link: "/project3",
-  // },
-  // {
-  //   title: "Project 4",
-  //   description:
-  //     "lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  //   image: "/sample-image.jpg",
-  //   link: "/project4",
-  //   code_link: "/project4",
-  // },
+  {
+    title: "LivePoll",
+    description:
+      "A web application that allows users to create and participate in live polls. The application is built using ejs, Nodejs, Expressjs, Socket.io",
+    image: "/livepoll.png",
+    link: "",
+    code_link: "https://github.com/cjsupan/cj-livepoll",
+  },
+  {
+    title: "Gamerz",
+    description:
+      "A mobile application that allows users to view and explore the latest agents, weapons, and maps in Valorant. The application is built using Flutter and valorant-api.",
+    image: "/gamerz.png",
+    link: "",
+    code_link: "https://github.com/cjsupan/gamez",
+  },
 ];

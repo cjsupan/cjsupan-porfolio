@@ -17,9 +17,7 @@ export default function Providers({
     if (storedTheme) {
       setTheme(storedTheme);
     }
-    setMounted(true);
   }, []);
 
-  if (!mounted) return null;
   return <ThemeProvider>{children}</ThemeProvider>;
 }
